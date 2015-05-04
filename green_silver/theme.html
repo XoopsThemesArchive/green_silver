@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!--ライトボックス用-->
+<link rel="stylesheet" href="<{$xoops_url}>/lightbox2.03.3/css/lightbox.css" type="text/css" media="screen" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<!--ライトボックス用-->
+<script type="text/javascript" src="<{$xoops_url}>/lightbox2.03.3/js/prototype.js"></script>
+<script type="text/javascript" src="<{$xoops_url}>/lightbox2.03.3/js/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="<{$xoops_url}>/lightbox2.03.3/js/lightbox.js"></script>
+</head>
+<body class="body">
+<!--ヘッダ部定義-->
+<div class="header_wrap">
+<div class="header">
+	<div id="head_left_wrap">
+	<div id="head_left">
+		<h1><a href="<{$xoops_url}>/"><{$xoops_sitename}></a></h1>
+		<h2><{$xoops_pagetitle}></h2>
+	</div>
+	</div>
+	<div id="head_right_wrap">
+	<div id="head_right">
+		<{if !$xoops_isuser}>
+<!-- ログインしていないなら -->
+		<form action="<{$xoops_url}>/user.php" method="post" style="margin: 0px;">
+		Username&nbsp;
+		<input class="input" type="text" name="uname" size="18" />
+		&nbsp;Password&nbsp;
+		<input class="input" type="password" name="pass" size="18" />
+		<input type="hidden" name="op" value="login" />
+		<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+		&nbsp;
+		<input class="login" type="submit" value="Login" />
+		</form>
+<!-- ログインしていたら -->
+		<{else}>
+		<a href="<{$xoops_url}>/user.php">ステータス</a>&nbsp;&nbsp;|&nbsp;
+		<a href="<{$xoops_url}>/notifications.php">情報通知</a>&nbsp;&nbsp;|&nbsp;
+		<a href="<{$xoops_url}>/viewpmsg.php">受信箱</a>&nbsp;&nbsp;|&nbsp;
+		<a href="<{$xoops_url}>/user.php?op=logout">ログアウト</a>
+		<{if $xoops_isadmin}>|&nbsp;&nbsp;<a href="<{$xoops_url}>/admin.php">管理用</a><{/if}>
+		<{/if}>
+		<a href="http://www.expiece.com/html/" target="_blank"><img src="<{$xoops_imageurl}>/none.gif" /></a>
+		<{if $xoops_isuser}>
+<!-- ログインしていたら -->
+		<br /><br />Welcome <{$xoops_uname}> ! How are you ?
+		<{else}>
+<!-- ログインしていないなら -->
+		<br /><br /><a href="<{$xoops_url}>/register.php">
+		<span id="register">register now !</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<{$xoops_url}>/user.php"><span id="lost_pass">lost password ?</span></a>
+		<{/if}>
+	</div>
+	</div>
+</div>
+</div>
+<div class="height_space"></div>
+<!-- ヘッダメニュー -->
+<div class="header_menu_wrap">
+<div class="menu_left">
+<div class="menu_right">
+<div class="header_menu">
+	<ul id="ul">
+		<li class="li"><a href="<{$xoops_url}>/">Home</a> | </li>
+		<li class="li"><a href="<{$xoops_url}>/modules/bulletin">News</a> | </li>
+		<li class="li"><a href="<{$xoops_url}>/modules/xhnewbb">Forum</a> | </li>
+		<li class="li"><a href="<{$xoops_url}>/modules/html_tag2">HTML Tag</a> | </li>
+		<li class="li"><a href="<{$xoops_url}>/modules/amaxoop2">Reference</a> | </li>
+		<li class="li"><a href="<{$xoops_url}>/modules/myalbum0">Album</a> | </li>
+		<li class="li"><a href="<{$xoops_url}>/modules/mydownloads">Downloads</a> | </li>
+		<li class="li"><a href="<{$xoops_url}>/modules/mylinks">Web Links</a> | </li>
+		<li class="li"><a href="<{$xoops_url}>/modules/sitemap">Site Map</a></li>
+	</ul>
+</div></div></div></div>
+<div class="height_space"></div>
+<!-- ヘッダメニュー -->
+<!--ボディ部定義-->
+<div id="container">
+	<div id="body_t_l">
+	<div id="body_t_r">
+	<div id="body_t_c">
+	</div>
+	</div>
+	</div>
+	<div id="body_l">
+	<div id="body_r">
+	<div id="body_c">
+		<div class="body_column">
+<!-- メイン部分定義 -->
+			<div id="centercolumn">
+			<{if $xoops_showcblock == 1}>
+<!-- 中央中央ブロック定義 -->
+				<{foreach item=block from=$xoops_ccblocks}>
+				<div id="centerCcolumn">
+					<{if ! $block.title|strstr:"none"}>
+						<div class="blockTitle"><div class="r_title"><{$block.title}></div></div>
+					<{/if}>
+					<div class="blockContent"><{$block.content}></div>
+				</div>
+				<{/foreach}>
+<!-- 中央中央ブロック終了 -->
+				<{if $xoops_clblocks || $xoops_crblocks }>
+				<div class="cl_cr_col">
+<!-- 中央左ブロック定義 -->
+					<div id="centerLcolumn">
+					<{foreach item=block from=$xoops_clblocks}>
+						<{if ! $block.title|strstr:"none"}>
+							<div class="blockTitle"><div class="r_title"><{$block.title}></div></div>
+						<{/if}>
+						<div class="blockContent"><{$block.content}></div>
+					<{/foreach}>
+					</div>
+<!-- 中央左ブロック終了 -->
+<!-- 中央右ブロック定義 -->
+					<div id="centerRcolumn">
+					<{foreach item=block from=$xoops_crblocks}>
+						<{if ! $block.title|strstr:"none"}>
+							<div class="blockTitle"><div class="r_title"><{$block.title}></div></div>
+						<{/if}>
+						<div class="blockContent"><{$block.content}></div>
+					<{/foreach}>
+					</div>
+<!-- 中央右ブロック終了 -->
+				</div>
+			<{/if}>
+		<{/if}>
+<!-- メインコンテンツ定義 -->
+			<{if $xoops_contents}>
+			<div id="content"><{$xoops_contents}></div>
+			<{/if}>
+			<div class="height_space_cm1">
+<!--中央ブロック下部に表示するバナースペース・・・CSSのheightを調節しないと表示しません-->
+			</div>
+		</div>
+<!-- メインコンテンツ終了 -->
+		<div class="left_right_col">
+<!-- 左ブロック定義 -->
+			<div id="leftcolumn">
+			<{if $xoops_showlblock == 1}>
+				<{foreach item=block from=$xoops_lblocks}>
+					<{if ! $block.title|strstr:"none"}>
+						<div class="blockTitle">
+						<div class="title_left">
+						<div class="title_right">
+						<span class="title">
+						<{$block.title}>
+						</span>
+						</div></div></div>
+					<{/if}>
+					<div class="content_left">
+					<div class="content_right">
+					<div class="blockContent">
+					<{$block.content}>
+					</div></div></div>
+					<div class="content_b_c">
+					<div class="content_b_left">
+					<div class="content_b_right">
+					</div></div></div>
+				<{/foreach}>
+			<{/if}>
+			</div>
+<!-- 左ブロック終了 -->
+<!-- 右ブロック定義 -->
+			<div id="rightcolumn">
+			<{if $xoops_showrblock == 1}>
+				<{foreach item=block from=$xoops_rblocks}>
+					<{if ! $block.title|strstr:"none"}>
+						<div class="blockTitle"><{$block.title}></div>
+					<{/if}>
+					<div class="content_t_c">
+					<div class="content_t_left">
+					<div class="content_t_right">
+					</div></div></div>
+					<div class="blockContent"><{$block.content}></div>
+					<div class="content_b_c">
+					<div class="content_b_left">
+					<div class="content_b_right">
+					</div></div></div>
+				<{/foreach}>
+			<{/if}>
+			</div>
+<!-- 右ブロック終了 -->
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div id="body_b_l">
+	<div id="body_b_r">
+	<div id="body_b_c">
+	</div>
+	</div>
+	</div>
+<div class="height_space_cm2">
+<!--フッターの上部に表示するバナースペース・・・CSSのheightを調節しないと表示しません-->
+</div>
+</div>
+<!-- フッタ部定義 -->
+	<div class="footerbar">
+		<h3><{$xoops_footer}>&nbsp;&nbsp;Theme Designed by&nbsp;&nbsp;<a href="http://www.expiece.com/html/" target="_blank">EXTRAFFIC</a></h3>
+	</div>
+<!-- フッタ部終了 -->
+</body>
+</html>
